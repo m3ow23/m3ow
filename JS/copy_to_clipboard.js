@@ -5,6 +5,7 @@ function generateHash() {
         alert("Please provide an input!");
         return;
     }
+
     if (!navigator.clipboard) {
         alert('Clipboard API is not available');
         return;
@@ -13,5 +14,7 @@ function generateHash() {
     userInput.select();
     userInput.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(m3ow_hash(userInput.value));
+    sleep(500);
+    alert('Hash is copied to clipboard!');
     return;
 }
