@@ -3,7 +3,6 @@ body{
 }
 
 .main-container{
-    height: calc(90vh - 50vh);
     margin-top: 40vh;
     text-align: center;
 }
