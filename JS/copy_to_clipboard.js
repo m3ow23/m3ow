@@ -3,11 +3,18 @@ function generateHash() {
 
     if (userInput.value == "") {
         alert("Please provide an input!");
+        userInput.select();
+        userInput.setSelectionRange(0, 99999);
         return;
     }
-
+    if (userInput.value.length > 62) {
+        alert("Input limit is 62 characters!");
+        userInput.value = "";
+        return;
+    }
     if (!navigator.clipboard) {
         alert('Clipboard API is not available!');
+        location.reload()
         return;
     }
 
