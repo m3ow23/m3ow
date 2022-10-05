@@ -3,7 +3,8 @@ body{
 }
 
 .main-container{
-    margin-top: 220px;
+    height: calc(90vh - 50vh);
+    margin-top: 40vh;
     text-align: center;
 }
 
@@ -11,6 +12,7 @@ body{
     color: #eeeeee;
     font-size: 3em;
     font-family: sans-serif;
+    margin: 0;
     margin-bottom: 30px;
 }
 
@@ -30,7 +32,15 @@ body{
 }
 
 @media screen and (max-width: 1279px) {
-    body {
-      background-color: blue;
+    .main-container p{
+        font-size: 6em;
+    }
+    
+    .main-container input{
+        font-size: 2em;
+    }
+    
+    .main-container button{
+        font-size: 2em;
     }
 }
