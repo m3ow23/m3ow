@@ -7,13 +7,19 @@ function generateHash() {
     }
 
     if (!navigator.clipboard) {
-        alert('Clipboard API is not available');
+        alert('Clipboard API is not available!');
         return;
     }
 
     userInput.select();
     userInput.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(m3ow_hash(userInput.value));
-    alert('Hash is copied to clipboard!');
+    navigator.clipboard
+        .writeText(m3ow_hash(userInput.value))
+        .then(() => {
+            alert("Hash is copied to clipboard.");
+        })
+        .catch(() => {
+            alert("An Error went wrong!");
+        });
     return;
 }
