@@ -4,7 +4,7 @@ function generateHash() {
     if (userInput != "") {
         navigator.clipboard.writeText(m3ow_hash(userInput));
 
-        alert(userInput);
+        alert(m3ow_hash(userInput));
         return;
     }
 
