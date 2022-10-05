@@ -1,7 +1,7 @@
 function generateHash() {
     var userInput = document.getElementById("userInput"); 
 
-    if (userInput == "") {
+    if (userInput.value == "") {
         alert("Please provide an input!");
         return;
     }
